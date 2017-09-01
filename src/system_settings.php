@@ -4,14 +4,14 @@ defined('SM_APEXEC') or die('no direct access');
 
 //DATABASE CONFIGURATION
 define('DB_DRIVER', 'mysqli');
-define('DB_HOSTNAME', 'localhost');
-define('DB_USERNAME', '');
-define('DB_PASSWORD', '');
-define('DB_DATABASE', '');
+define('DB_HOSTNAME', ini_get('mysqli.default_host'));
+define('DB_USERNAME', ini_get('mysqli.default_user'));
+define('DB_PASSWORD', ini_get('mysqli.default_pw'));
+define('DB_DATABASE', ini_get('mysqli.default_user'));
 define('DB_PREFIX', '');
 
 // LDAP CREDENTIALS
-define('LDAP_ENABLED', TRUE); // SET TRUE OR FALSE
+define('LDAP_ENABLED', FALSE); // SET TRUE OR FALSE
 //define('LDAP_SERVER', '');
 define('LDAP_SERVER', '');
 define('LDAP_PORT', '');
